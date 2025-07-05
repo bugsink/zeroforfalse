@@ -8,5 +8,6 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         list(MyModel.objects.filter(boolean_field=False))
+        list(MyModel.objects.filter(boolean_field=True))
         for q in connection.queries:
             print(q['sql'])
